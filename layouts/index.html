@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ .Content }}
+<div class="divider"></div>
+{{ $posts := .Site.GetPage "posts" }}
+{{ if $posts }}
+<div class="posts-section">
+<h2>Recent Posts</h2>
+<div class="time-list">
+<ul>
+{{ range first 5 $posts.Pages.ByDate.Reverse }}
+<li>
+<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02-01-2006" }} · {{ .ReadingTime }}m</time>
+<div><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></div>
+</li>
+{{ end }}
+</ul>
+</div>
+<p><a href="{{ $posts.RelPermalink }}">View all posts →</a></p>
+</div>
+{{ end }}
+<div class="terminal-nav">
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+</div>
+{{ end }} 

@@ -1,0 +1,9 @@
+{{- $page := .page }}
+{{- $taxonomy := .taxonomy }}
+{{- with $page.Param $taxonomy }}
+<div class="terms-list"><ul>
+{{- range . }}
+<li><a href="{{ (site.GetPage (printf "/%s/%s" $taxonomy .)).RelPermalink }}">{{ . }}</a></li>
+{{- end }}
+</ul></div>
+{{- end }} 

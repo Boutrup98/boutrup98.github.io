@@ -1,0 +1,43 @@
+baseURL = 'https://yourdomain.com/'  # CHANGE THIS to your actual domain
+languageCode = 'en-us'
+title = 'jbl design'
+description = 'Personal portfolio and blog of designer, Jacob Boutrup Lorensen'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  author = "Jacob Boutrup Lorensen"
+  email = "Boutrup98@gmail.com"
+  description = "Personal portfolio and blog showcasing design work, projects, and thoughts on design philosophy"
+  
+  enableSearch = true
+  enableComments = false
+  
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2 
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+
+[security]
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+    [security.exec.env]
+      HUGO_ENVIRONMENT = 'production'
+      HUGO_ENV = 'production'
