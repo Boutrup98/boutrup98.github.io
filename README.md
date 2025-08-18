@@ -1,14 +1,6 @@
-# Shibui-Inspired Hugo Site
+# jbl design
 
-A minimalist Hugo site inspired by the [Shibui theme](https://github.com/ntk148v/shibui) with dark theme and clean typography.
-
-## Features
-
-- **Minimalist Design**: Shibui (渋い) aesthetics
-- **Dark Theme**: Custom hex color palette
-- **Responsive**: Mobile-optimized layout
-- **Zero JavaScript**: Pure CSS solutions
-- **Customizable**: CSS variables for easy modification
+My personal website published with GitHub Pages.
 
 ## Quick Start
 
@@ -29,14 +21,3 @@ Modify colors in `assets/css/main.css`:
   --color-text-muted: #878580;
 }
 ```
-
-## Structure
-
-- `content/` - Site content (posts, projects, about)
-- `layouts/` - Custom templates
-- `assets/css/main.css` - Optimized stylesheet
-- `hugo.toml` - Configuration
-
-## License
-
-MIT 
