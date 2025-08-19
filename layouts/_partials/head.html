@@ -3,20 +3,6 @@
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 <meta name="robots" content="index, follow">
-
-<!-- Security Headers -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
-
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <link rel="icon" type="image/jpeg" sizes="16x16" href="/images/favicon-16x16.jpg">
-{{- with resources.Get "css/main.css" }}
-{{- if hugo.IsDevelopment }}
-<link rel="stylesheet" href="{{ .RelPermalink }}">
-{{- else }}
-{{- with . | minify | fingerprint }}
-<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-{{- end }}
-{{- end }}
-{{- end }} 
+<link rel="stylesheet" href="/css/main.css"> 
