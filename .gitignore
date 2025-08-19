@@ -1,0 +1,25 @@
+# Hugo default output directory
+/public/
+
+# Hugo generated files
+.hugo_build.lock
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Hugo cache
+.cache/
+
+# Node modules (if using any Node.js tools)
+node_modules/
+
+# Environment variables
+.env
+.env.local
