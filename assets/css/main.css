@@ -110,6 +110,7 @@ p > code {
 
 p > code ::selection { background: var(--color-selection-code-bg); color: var(--color-text-primary); }
 
+/* Terms list styling with proper spacing */
 .terms-list { padding: var(--spacing-base) 0; margin: var(--spacing-base) 0; }
 .terms-list ul { list-style-type: none; margin: 0; padding: 0; }
 .terms-list ul li { display: inline-block; margin: 0 var(--spacing-sm) var(--spacing-sm) 0; }
