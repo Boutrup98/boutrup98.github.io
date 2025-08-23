@@ -33,6 +33,11 @@ description = 'Personal portfolio and blog of designer, Jacob Boutrup Lorensen'
 [outputs]
   home = ["HTML", "RSS"]
 
+[assets]
+  [assets.css]
+    minify = true
+  [assets.js]
+    minify = true
 
 [security]
   [security.exec]

@@ -8,7 +8,8 @@
 <meta name="robots" content="index, follow">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <link rel="icon" type="image/jpeg" sizes="16x16" href="/images/favicon-16x16.jpg">
-<link rel="stylesheet" href="/css/main.css">
+{{ $style := resources.Get "css/main.css" }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </head>
 <body>
 <header>{{ partial "header.html" . }}</header>
