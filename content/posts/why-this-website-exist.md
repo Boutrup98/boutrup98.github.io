@@ -4,7 +4,7 @@ date: 2025-08-18
 tags: ["small-web", "portfolio", "hugo", "obsidian"]
 ---
 
-The web today often feels less like a place of discovery and more like a competition for your attention. Algorithms, notifications, and engagement metrics shape much of what we see and do online. As a designer, I’ve been part of this system—my work is frequently judged by how well it captures attention. It’s effective, but it can also feel like a double-edged sword.
+The web today often feels less like a place of discovery and more like a competition for your attention. Algorithms, notifications, and engagement metrics shape much of what we see and do online. As a designer, I’ve been part of this system, my work is frequently judged by how well it captures attention. It’s effective, but it can also feel like a double-edged sword.
 
 A while ago, I came across the idea of the Small Web. Unlike the ad-driven, corporate-dominated Big Web, the Small Web is built around personal websites, blogs, and projects that you stumble upon through recommendations, links, or curiosity, not algorithms. What I love about it is the sense of exploration: you find things because you want to, not because something is trying to keep you scrolling.
 
