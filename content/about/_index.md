@@ -23,6 +23,6 @@ If you find this interesting, you can subscribe to this site via <a href="/index
 
 ## Colophon
 
-This website is a lightweight <a href="https://gohugo.io/">Hugo</a> site, based on a customized version of the beautiful <a href="https://themes.gohugo.io/themes/shibui/">Shibui (渋い)</a> theme by Kien Nguyen Tuan. The site content is managed with <a href="https://obsidian.md/">Obsidian</a>, inspired by the stucture of <a href="https://stephango.com/">Steph Ango</a>. The code was created using <a href="https://cursor.com/">Cursor</a> and hosted on <a href="https://docs.github.com/en/pages">GitHub Pages</a>.
+This website is a lightweight <a href="https://gohugo.io/">Hugo</a> site, based on a customized version of the beautiful <a href="https://themes.gohugo.io/themes/shibui/">Shibui (渋い)</a> theme by Kien Nguyen Tuan. The code was created using <a href="https://cursor.com/">Cursor</a> and the site is hosted on <a href="https://docs.github.com/en/pages">GitHub Pages</a>.
 
 Learn more about <a href="/posts/why-this-website-exist">why this website exists</a>.
