@@ -1,6 +1,6 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
-{{ partial "date.html" .Date}}
+<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02-01-2006" }} · {{ .ReadingTime }}m</time>
 <div class="divider"></div>
 {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ .Content }}
