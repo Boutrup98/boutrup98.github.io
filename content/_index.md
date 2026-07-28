@@ -5,7 +5,7 @@ title: "Welcome"
 
 <img src="/images/jbl.jpg" alt="Jacob Boutrup Lorensen Headshot" class="profile-image">
 <div>Jacob Boutrup Lorensen</div>
-<span style="color: var(--color-text-muted);">Co-Founder & Designer</span>
+<div style="color: var(--color-text-secondary);">Co-Founder & Designer</div>
 
 I’m a tech-driven digital product designer with 8+ years of experience in digital design. I’m currently based in Aarhus, Denmark, where I work as Co-Founder and Lead Designer at <a href="https://www.fenerum.com" target="_blank">Fenerum</a>.
 
