@@ -1,0 +1,17 @@
+#:schema https://conductor.build/schemas/settings.repo.schema.json
+
+[scripts]
+# No dependencies to install for this Hugo site — just verify the one required
+# tool is available so workspace creation fails fast if Hugo is missing.
+setup = "hugo version"
+
+# Live dev server. Each workspace gets its own port range, so use CONDUCTOR_PORT
+# to allow multiple workspaces to run at once. --buildDrafts matches the README.
+run = "hugo server --buildDrafts --port \"$CONDUCTOR_PORT\" --bind 0.0.0.0"
+
+# Remove the gitignored build output before archiving the workspace.
+archive = "rm -rf public"
+
+# Each workspace serves on its own CONDUCTOR_PORT with no shared local resource,
+# so multiple workspaces can run their dev servers simultaneously.
+run_mode = "concurrent"

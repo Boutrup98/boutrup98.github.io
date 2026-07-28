@@ -1,7 +1,6 @@
 ---
 title: "Why this website exist"
 date: 2025-08-18
-tags: ["small-web", "portfolio", "hugo", "cursor"]
 ---
 
 The web today often feels less like a place of discovery and more like a competition for your attention. Algorithms, notifications, and engagement metrics shape much of what we see and do online. As a designer, I’ve been part of this system, my work is frequently judged by how well it captures attention. It’s effective, but it can also feel like a double-edged sword.
