@@ -1,0 +1,16 @@
+{{- /* Self-hosted silent auto-looping video (GIF replacement) from a resource.
+       Call with: (dict "resource" $vid "poster" "poster.jpg" "page" $page) */ -}}
+{{- $vid := .resource -}}
+{{- $ext := lower (path.Ext $vid.RelPermalink) -}}
+{{- $mime := "video/mp4" -}}
+{{- if eq $ext ".webm" -}}{{- $mime = "video/webm" -}}{{- end -}}
+{{- /* Optional poster: resolve as image resource (page bundle -> assets), emit optimized WebP. */ -}}
+{{- $poster := "" -}}
+{{- with .poster -}}
+  {{- $pimg := "" -}}
+  {{- with $.page.Resources.GetMatch . -}}{{- $pimg = . -}}{{- else -}}{{- with resources.Get . -}}{{- $pimg = . -}}{{- end -}}{{- end -}}
+  {{- with $pimg -}}{{- $poster = (.Resize "1200x webp q80").RelPermalink -}}{{- end -}}
+{{- end -}}
+<video class="content-video" autoplay muted loop playsinline preload="metadata"{{ with $poster }} poster="{{ . }}"{{ end }}>
+<source src="{{ $vid.RelPermalink }}" type="{{ $mime }}">
+</video>

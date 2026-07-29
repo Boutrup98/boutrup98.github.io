@@ -1,0 +1,22 @@
+{{ define "main" }}
+<h2>{{ .Title }}</h2>
+{{ .Content }}
+<div class="divider"></div>
+<ul class="work-list">
+{{ range .Pages }}
+{{ $p := . }}
+<li class="work-item">
+<div class="work-item-meta">
+<a class="work-item-title" href="{{ $p.RelPermalink }}">{{ $p.LinkTitle }}</a>
+<time datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $p.Date.Format "02-01-2006" }} · {{ $p.ReadingTime }}m</time>
+</div>
+{{ with $p.Params.thumbnail }}
+{{ $img := $p.Resources.GetMatch . }}
+{{ if not $img }}{{ $img = resources.Get . }}{{ end }}
+{{ if $img }}<a class="work-item-thumb" href="{{ $p.RelPermalink }}">{{ partial "image.html" (dict "resource" $img "alt" $p.Title "class" "work-thumbnail") }}</a>{{ end }}
+{{ end }}
+</li>
+{{ end }}
+</ul>
+<div class="divider"></div>
+{{ end }}

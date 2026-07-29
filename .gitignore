@@ -1,6 +1,9 @@
 # Hugo default output directory
 /public/
 
+# Hugo image-processing / resource cache
+/resources/_gen/
+
 # Hugo generated files
 .hugo_build.lock
 

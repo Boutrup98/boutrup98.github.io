@@ -1,0 +1,25 @@
+{{- /* Site-wide media render hook for ![alt](file): optimize local images, emit <video>
+       for video files, pass through the rest.
+       Resolves: page-bundle resource -> global asset -> plain fallback. */ -}}
+{{- $dest := .Destination -}}
+{{- $ext := lower (path.Ext $dest) -}}
+{{- $videoExts := slice ".mp4" ".webm" ".mov" -}}
+{{- $res := "" -}}
+{{- with .Page.Resources.GetMatch $dest -}}
+  {{- $res = . -}}
+{{- else -}}
+  {{- with resources.Get $dest -}}
+    {{- $res = . -}}
+  {{- end -}}
+{{- end -}}
+{{- if in $videoExts $ext -}}
+  {{- if $res -}}
+    {{- partial "video.html" (dict "resource" $res "poster" .Title "page" .Page) -}}
+  {{- else -}}
+    <video class="content-video" autoplay muted loop playsinline preload="metadata"><source src="{{ $dest | safeURL }}"></video>
+  {{- end -}}
+{{- else if $res -}}
+  {{- partial "image.html" (dict "resource" $res "alt" .PlainText "class" "content-image") -}}
+{{- else -}}
+  <img src="{{ $dest | safeURL }}" alt="{{ .PlainText }}" loading="lazy" decoding="async">
+{{- end -}}
