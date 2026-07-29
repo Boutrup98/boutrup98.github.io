@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'jbl design'
 description = 'Personal portfolio and blog of designer, Jacob Boutrup Lorensen'
 
+# Don't publish original bundle images — only the optimized WebP variants we reference.
+[[cascade]]
+  [cascade._build]
+    publishResources = false
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

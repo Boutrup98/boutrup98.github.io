@@ -1,19 +1,17 @@
 {{ define "main" }}
 {{ .Content }}
-<div class="divider"></div>
-{{ $posts := .Site.GetPage "posts" }}
-{{ if $posts }}
-<div class="posts-section">
-<h2>Recent Posts</h2>
-<div class="time-list">
-<ul>
-{{ range first 5 $posts.Pages.ByDate.Reverse }}
-<li>
-<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02-01-2006" }} · {{ .ReadingTime }}m</time>
-<div><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></div>
-</li>
+{{ $work := .Site.GetPage "work" }}
+{{ if $work }}
+<div class="work-section">
+<div class="work-gallery">
+{{ range first 5 $work.Pages.ByDate.Reverse }}
+{{ $p := . }}
+{{ with $p.Params.thumbnail }}
+{{ $img := $p.Resources.GetMatch . }}
+{{ if not $img }}{{ $img = resources.Get . }}{{ end }}
+{{ if $img }}<a class="work-gallery-item" href="{{ $p.RelPermalink }}">{{ partial "image.html" (dict "resource" $img "alt" $p.Title "class" "work-gallery-thumb") }}</a>{{ end }}
 {{ end }}
-</ul>
+{{ end }}
 </div>
 </div>
 {{ end }}

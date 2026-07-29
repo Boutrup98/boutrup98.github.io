@@ -1,0 +1,22 @@
+{{- /* Responsive, lazy-loaded WebP <img> from an image resource.
+       Call with: (dict "resource" $img "alt" "text" "class" "content-image") */ -}}
+{{- $img := .resource -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "content-image" -}}
+{{- $targets := slice 480 768 1200 -}}
+{{- $variants := slice -}}
+{{- range $w := $targets -}}
+  {{- if le $w $img.Width -}}
+    {{- $variants = $variants | append ($img.Resize (printf "%dx webp q80" $w)) -}}
+  {{- end -}}
+{{- end -}}
+{{- /* Original narrower than the smallest target: emit a single WebP at native width. */ -}}
+{{- if eq (len $variants) 0 -}}
+  {{- $variants = $variants | append ($img.Resize (printf "%dx webp q80" $img.Width)) -}}
+{{- end -}}
+{{- $largest := index $variants (sub (len $variants) 1) -}}
+{{- $srcset := slice -}}
+{{- range $v := $variants -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $v.RelPermalink $v.Width) -}}
+{{- end -}}
+<img class="{{ $class }}" src="{{ $largest.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 640px) 100vw, 800px" width="{{ $largest.Width }}" height="{{ $largest.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">

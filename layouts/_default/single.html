@@ -1,5 +1,10 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02-01-2006" }} · {{ .ReadingTime }}m</time>
+{{ with .Params.thumbnail }}
+{{ $img := $.Resources.GetMatch . }}
+{{ if not $img }}{{ $img = resources.Get . }}{{ end }}
+{{ if $img }}{{ partial "image.html" (dict "resource" $img "alt" $.Title "class" "article-thumbnail") }}{{ end }}
+{{ end }}
 {{ .Content }}
 {{ end }} 
