@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ with .Params.thumbnail }}
+{{ $img := $.Resources.GetMatch . }}
+{{ if not $img }}{{ $img = resources.Get . }}{{ end }}
+{{ if $img }}{{ partial "image.html" (dict "resource" $img "alt" $.Title "class" "article-thumbnail") }}{{ end }}
+{{ end }}
+{{ .Content }}
+{{ end }}

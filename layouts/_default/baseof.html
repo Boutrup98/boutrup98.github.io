@@ -5,17 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="{{ if .Params.noindex }}noindex, nofollow{{ else }}index, follow{{ end }}">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <link rel="icon" type="image/jpeg" sizes="16x16" href="/images/favicon-16x16.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 {{ $style := resources.Get "css/main.css" }}
 {{ if not hugo.IsDevelopment }}{{ $style = $style | minify | fingerprint }}{{ end }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}"{{ with $style.Data.Integrity }} integrity="{{ . }}" crossorigin="anonymous"{{ end }}>
 </head>
 <body>
+<div class="blur-gradient blur-gradient--bottom" aria-hidden="true">
+  <div></div><div></div><div></div><div></div><div></div><div></div>
+</div>
 <header>{{ partial "header.html" . }}</header>
 <main>{{ block "main" . }}{{ end }}</main>
 <footer>{{ partial "footer.html" . }}</footer>

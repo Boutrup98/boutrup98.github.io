@@ -1,0 +1,13 @@
+{{- $label := .Get "label" -}}
+{{- $title := .Get "title" -}}
+{{- $sub := .Get "sub" -}}
+{{- $url := .Get "url" -}}
+<li class="list-item">
+  <div class="list-item__label">{{ $label }}</div>
+  <div class="list-item__body">
+    <div class="list-item__title">
+      {{- if $url }}<a href="{{ $url }}" target="_blank" rel="noopener">{{ $title }}</a>{{ else }}{{ $title }}{{ end -}}
+    </div>
+    {{- with $sub }}<div class="list-item__sub">{{ . }}</div>{{ end }}
+  </div>
+</li>

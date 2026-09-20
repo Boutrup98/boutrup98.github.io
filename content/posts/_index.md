@@ -2,4 +2,4 @@
 title: "Posts"
 ---
 
-Here you'll find all the posts on this site. Each entry is listed with it's publication date and reading time. Subscribe via <a href="/index.xml">RSS</a>.
+Coming soon! In this section, you’ll soon be able to read posts sharing my thoughts on design and other topics.

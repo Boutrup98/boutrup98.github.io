@@ -2,29 +2,25 @@
 title: "About"
 ---
 
-My name is Jacob Boutrup Lorensen, and I'm passionate about design and technology. Currently, I help B2B SaaS companies knows their numbers and improve cash flow as Co-Founder and Design Lead at <a href="https://www.fenerum.com" target="_blank">Fenerum</a>.
+I'm Jacob Boutrup Lorensen, a multidisciplinary product designer with 10+ years of experience in digital design. I’m currently based in Aarhus, Denmark, where I work as Co-Founder and Design Lead at <a href="https://www.fenerum.com" target="_blank">Fenerum</a>.
 
-On the site, you'll find <a href="/posts" target="_blank">posts</a> sharing my thoughts on various topics, as well as details about <a href="/projects" target="_blank">projects</a> I’ve been involved in.
+I'm driven by creating, making and designing. I embrace simplicity and love crafting polished, delightful experiences.
 
-If you find this interesting, you can subscribe to this site via <a href="/index.xml">RSS</a> or get in touch through <a href="https://www.linkedin.com/in/jacob-boutrup-a68774135/" target="_blank">LinkedIn</a> or <a href="mailto:Boutrup98@gmail.com">Email</a>.
-
-<div class="divider"></div>
+If you find this interesting, you can subscribe via <a href="/index.xml">RSS</a> or get in touch through <a href="https://www.linkedin.com/in/jacob-boutrup-a68774135/" target="_blank">LinkedIn</a> or <a href="mailto:Boutrup98@gmail.com">Email</a>.
 
 ## Experience
 
-- **2023 - ????** · Fenerum · Co-Founder & Design Lead
-- **2020 - 2023** · Knowit Experience · Digital Designer
-- **2020 - 2021** · Fenerum · Product Designer
-- **2018 - 2020** · Byro · Brand & UI/UX designer
-- **2017 - 2019** · Nearcrowd · Co-Founder & Design Lead
-- **2015 - 2017** · Konma · Webdesigner & content creator
-
-<div class="divider"></div>
+{{< list >}}
+{{< list-item label="2023 - Present" title="Co-Founder & Design Lead" sub="Fenerum" >}}
+{{< list-item label="2020 - 2023" title="Digital Designer" sub="Knowit Experience" >}}
+{{< list-item label="2020 - 2021" title="Product Designer" sub="Fenerum" >}}
+{{< list-item label="2018 - 2020" title="Brand & UI/UX Designer" sub="Byro" >}}
+{{< list-item label="2017 - 2019" title="Co-Founder & Design Lead" sub="Nearcrowd" >}}
+{{< list-item label="2015 - 2017" title="Webdesigner & Content Creator" sub="Konma" >}}
+{{< /list >}}
 
 ## Colophon
 
-This website is a lightweight <a href="https://gohugo.io/">Hugo</a> site, based on a customized version of the beautiful <a href="https://themes.gohugo.io/themes/shibui/">Shibui (渋い)</a> theme by Kien Nguyen Tuan. The code was created using <a href="https://cursor.com/" target="_blank">Cursor</a> and the site is hosted on <a href="https://docs.github.com/en/pages">GitHub Pages</a>.
+This website is built as a static <a href="https://gohugo.io/">Hugo</a> site, to make it lightweight and fast. The code was created with the help of <a href="https://claude.com/claude-code" target="_blank">Claude Code</a> using <a href="https://conductor.build" target="_blank">Conductor</a> and the site is hosted on <a href="https://docs.github.com/en/pages">GitHub Pages</a>.
 
 This website emits less than <span class="highlight">0.01g</span> of CO² per visit · <a href="https://www.websitecarbon.com/website/jbld-co/" target="_blank">websitecarbon.com</a>
-
-Learn more about <a href="/posts/why-this-website-exist">why this website exists</a>.
