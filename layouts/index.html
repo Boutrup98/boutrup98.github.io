@@ -4,7 +4,7 @@
 {{ if $work }}
 <div class="work-section">
 <div class="work-gallery">
-{{ range first 5 $work.Pages.ByDate.Reverse }}
+{{ range first 5 $work.Pages.ByWeight }}
 {{ $p := . }}
 {{ with $p.Params.thumbnail }}
 {{ $img := $p.Resources.GetMatch . }}
@@ -15,5 +15,4 @@
 </div>
 </div>
 {{ end }}
-<div class="divider"></div>
-{{ end }} 
+{{ end }}

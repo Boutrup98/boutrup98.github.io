@@ -1,5 +1,6 @@
 ---
 title: "Molslinjen"
+weight: 1
 date: 2026-07-28
 thumbnail: "thumbnail.png"
 ---
@@ -28,5 +29,15 @@ We also created a new iOS and Android app that puts a better digital experience 
 ![Molslinjen app](molslinjen-app.png)
 
 ## Awards
-- <a href="https://danishdigitalaward.dk" target="_blank">Danish Digital Awards</a> · Best in Digital Design · Shortlisted · 2025
-- <a href="https://danishdigitalaward.dk" target="_blank">Danish Digital Awards</a> · Digital Design · Shortlisted · 2023
+
+{{< list >}}
+{{< list-item label="2025" title="Danish Digital Awards · Best in Digital Design" sub="Shortlisted" url="https://danishdigitalaward.dk" >}}
+{{< list-item label="2023" title="Danish Digital Awards · Digital Design" sub="Shortlisted" url="https://danishdigitalaward.dk" >}}
+{{< /list >}}
+
+## Credits
+
+{{< list >}}
+{{< list-item label="Client" title="Molslinjen" url="https://www.molslinjen.dk/" >}}
+{{< list-item label="Agency" title="Knowit" url="https://www.knowit.dk" >}}
+{{< /list >}}

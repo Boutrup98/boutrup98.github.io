@@ -1,5 +1,7 @@
 ---
 title: "Work"
+cascade:
+  noindex: true
 ---
 
-Coming soon! In this section, you'll soon be able to explore some of the work I've been involved in.
+Discover a selection of my work and a curated look at some of the projects and cases I've been involved in.
