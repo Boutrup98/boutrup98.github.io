@@ -3,7 +3,7 @@ title: "Welcome"
 ---
 
 
-<img src="/images/jbl.jpg" alt="Jacob Boutrup Lorensen Headshot" class="profile-image">
+<img src="/images/jbl.webp" width="70" height="70" alt="Jacob Boutrup Lorensen Headshot" class="profile-image" decoding="async">
 <div>Jacob Boutrup Lorensen</div>
 <div style="color: var(--color-text-secondary);">Co-Founder & Designer</div>
 
