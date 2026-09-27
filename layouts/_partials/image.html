@@ -19,4 +19,4 @@
 {{- range $v := $variants -}}
   {{- $srcset = $srcset | append (printf "%s %dw" $v.RelPermalink $v.Width) -}}
 {{- end -}}
-<img class="{{ $class }}" src="{{ $largest.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 640px) 100vw, 800px" width="{{ $largest.Width }}" height="{{ $largest.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+<img class="{{ $class }}" src="{{ $largest.RelPermalink }}" srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 640px) 100vw, min(60ch, 100vw)" width="{{ $largest.Width }}" height="{{ $largest.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">

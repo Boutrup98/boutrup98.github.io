@@ -9,7 +9,7 @@
 {{ with $p.Params.thumbnail }}
 {{ $img := $p.Resources.GetMatch . }}
 {{ if not $img }}{{ $img = resources.Get . }}{{ end }}
-{{ if $img }}<a class="work-gallery-item" href="{{ $p.RelPermalink }}">{{ partial "image.html" (dict "resource" $img "alt" $p.Title "class" "work-gallery-thumb") }}</a>{{ end }}
+{{ if $img }}<a class="work-gallery-item" href="{{ $p.RelPermalink }}">{{ partial "work-thumb.html" (dict "resource" $img "alt" $p.Title) }}</a>{{ end }}
 {{ end }}
 {{ end }}
 </div>
