@@ -1,9 +1,9 @@
 {{- /* Feather-light homepage gallery thumbnail.
-       Crops to the real display box (~full-width x 350px, object-fit: cover) at low
-       WebP quality, with a 1x and ~1.5x candidate only — no oversized retina fetch.
+       Resizes to the display width (preserving the full image, no crop) at low WebP
+       quality, with a 1x and ~1.5x candidate only — no oversized retina fetch.
        Call with: (dict "resource" $img "alt" "text") */ -}}
 {{- $img := .resource -}}
 {{- $alt := .alt | default "" -}}
-{{- $one := $img.Fill "500x350 webp q45" -}}
-{{- $two := $img.Fill "750x525 webp q45" -}}
-<img class="work-gallery-thumb" src="{{ $one.RelPermalink }}" srcset="{{ $one.RelPermalink }} 500w, {{ $two.RelPermalink }} 750w" sizes="(max-width: 640px) 100vw, 500px" width="500" height="350" alt="{{ $alt }}" loading="lazy" decoding="async">
+{{- $one := $img.Resize "500x webp q45" -}}
+{{- $two := $img.Resize "750x webp q45" -}}
+<img class="work-gallery-thumb" src="{{ $one.RelPermalink }}" srcset="{{ $one.RelPermalink }} 500w, {{ $two.RelPermalink }} 750w" sizes="(max-width: 640px) 100vw, 500px" width="{{ $one.Width }}" height="{{ $one.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
